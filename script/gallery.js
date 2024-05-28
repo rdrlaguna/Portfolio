@@ -148,7 +148,9 @@ function insertErrorMessage () {
 // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 // :::::::::::::::::::: PROJECT FUNCTIONS :::::::::::::::::::::
 
-// .................... MARIO ....................
+
+// ...........................................................
+// .................... MARIO ................................
 function mario(userInput, outputContainer) {
 
     // Error checking
@@ -180,11 +182,12 @@ function mario(userInput, outputContainer) {
 
 
 
-// .................... CASH ....................
+// ...........................................................
+// .................... CASH .................................
 function cash(userInput, outputContainer) {
 
     // Error checking
-    if (userInput < 0 || userInput % 1 !== 0) {
+    if (userInput <= 0 || userInput % 1 !== 0) {
         // alert('ERROR: Invalid input.');
         outputContainer.append(insertErrorMessage());
         return outputContainer;
@@ -256,17 +259,125 @@ function cash(userInput, outputContainer) {
 
 
 
-// .................... CREDIT ....................
+
+// ...........................................................
+// .................... CREDIT ...............................
 function credit(userInput, outputContainer) {
 
+    // Find the first two digits of the card   
+    const input = userInput.split("");
+    const length = userInput.toString().length
+
+    // ERROR CHECKING 
+    if (length < 13 || length >16) {
+        // alert('ERROR: Invalid input.');
+        outputContainer.append(insertErrorMessage());
+        return outputContainer;
+    }
 
 
+    // Check credit card's validity
+    let cardChecksum = (calculateChecksum(input, length));
+    
+
+    // Print card type
+    let cardType = calculateCardType(cardChecksum, input, length);
+    let pTag = document.createElement('p');
+    if (cardType === 'INVALID') {
+        pTag.className = "invalid-card";
+    } else {
+        pTag.className = "valid-card";
+    }
+
+    pTag.innerHTML = cardType;
+    outputContainer.append(pTag);
+    return outputContainer;
+    
 
 }
 
 
 
-// .................... READABILITY ....................
+// Calculates card's CHECKSUM
+function calculateChecksum(input, len) {
+
+
+    // Calculate first sum
+    let firstSum = 0;
+    
+    for (let i = len - 2; i >= 0; i -= 2) {
+        
+        // Multiply by 2 every second number starting from the second last
+        let product = input[i] * 2;
+
+        // Add product's digits when product > 9
+        if (product > 9) {
+
+            let productArray = product.toString().split("")
+
+            for (k = 0; k < productArray.length; k++) {
+                let digit = productArray[k];
+                firstSum += parseInt(digit);
+            }
+        } else {
+            firstSum += product;
+        }
+    }
+
+   
+    // Calculate second sum
+    // Add every second number starting from the last
+    let secondSum = 0;
+    for (let j = len - 1; j >= 0; j -= 2) {
+
+        let digit = input[j]
+        secondSum += parseInt(digit);
+
+    }
+
+    // Return validity of checksum
+    return (firstSum + secondSum) % 10;
+}
+
+
+
+// Selects the card's type if checksum is right
+function calculateCardType(checksum, input, len) {
+
+    const cardStart = [input[0], input[1]];
+    const start = cardStart.join('');
+
+    if (checksum !== 0)
+    {
+        return 'INVALID';
+    } else {
+
+        if (len === 15 && (start == 34 || start == 37)) {
+
+            return 'AMERICAN';
+
+        } else if (len === 16 && start >= 51 && start <= 55) {
+
+            return 'MASTERCARD';
+
+        } else if ((len === 13 || len === 16) && start >= 40 && start <= 49) {
+            
+            return 'VISA';
+
+        } else {
+
+            return 'INVALID';
+
+        }
+    }
+
+}
+
+
+
+
+// ...........................................................
+// .................... READABILITY ..........................
 function readability(userInput, outputContainer) {
 
 }

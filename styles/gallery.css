@@ -1,0 +1,306 @@
+:root {
+    --primary-color: #83E7C7;
+    --secondary-color: #22B989;
+    --light-color: #C0F7E5;
+    --medium-color: #125941;
+    --dark-color: #003323;
+
+    --accent-color-light: #FFC107;
+    --accent-color-medium: #ffa007;
+    --accent-color-dark: #ff7f07;
+
+    --text-color-light: #414141;
+    --text-color-medium: #272727;
+    --text-color-dark:  #151515;
+
+    --backgound-color: #e4e4e4;
+    --footer-color: #aeaeae;
+}
+
+
+
+main * {
+    /*border: 1px solid red;*/
+    position: relative;
+}
+
+
+/* ...................................................... */
+/* .................... PROJECT LIST .................... */
+#projects-list {
+    width: 15%;
+    height: 100;
+    position: fixed;
+
+}
+
+
+.pj-list {
+    width: 80%;
+    margin: 6rem auto 0 auto;
+    gap: 1rem;
+}
+
+
+.li-link {
+    height: 6rem;
+    font-size: 3rem;
+    text-align: center;
+    padding: calc((6rem - 3rem) / 2);
+    border-radius: 10px;
+    list-style: none;
+    background-color: #22B989;
+    opacity: 45%;
+}
+
+.pj-link {
+    color: var(--backgound-color);
+    text-decoration: none;
+    padding: 0.8rem 2rem 0.8rem 2rem;
+
+}
+
+.li-link:hover {
+    background-color: #125941;
+    opacity: 65%;
+
+}
+
+
+
+
+/* ......................................................... */
+/* .................... PROJECT GALLERY .................... */
+#projects-container {
+    width: 80%;
+    padding-top: 6rem;
+    justify-content: flex-start;
+    position: absolute;
+    right: 0;
+}
+
+
+#projects-container > h1 {
+    width: 60%;
+    font-size: 5.5rem;
+    margin-bottom: 4rem;
+    letter-spacing: 0.4rem;
+    justify-content: space-between;
+
+}
+
+
+#projects-container section {
+    width: 60%;
+    height: 70vh;
+    margin-bottom: 20vh;
+}
+
+
+
+/* ......................................................... */
+/* .................... PROJECT SECTION .................... */
+.pj-container{
+    width: 100%;
+    height: 100%;
+}
+
+
+.pj-title {
+    font-size: 6rem;
+    height: 20%;
+    padding: calc((20% - 6rem) / 2) 0 calc((20% - 6rem) / 2) 0 ;
+}
+
+.pj-info {
+    width: 100%;
+    height: 60%;
+    font-size: 1.3rem;
+    text-align: justify;
+    letter-spacing: 0.2rem;
+    color: var(--text-color-medium);
+    border-radius: 10px 10px 0 0;
+}
+
+
+
+.pj-info, .user-input {
+    background-color: #c8c8c8;
+    padding: 2rem;
+}
+
+.pj-details,.output,
+.pj-input-container, .pj-buttons {
+    width: 50%;
+}
+
+
+
+
+
+/* _____ OUTPUT _____ */
+.output {
+    height: 100%;
+
+}
+
+
+.output-field {
+    width: 80%;
+    height: 90%;
+    background-color: var(--text-color-light);
+    border-radius: 10px;
+    margin:0 auto;
+
+}
+
+.output-container {
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 3rem;
+    font-family: 'Monaco', 'Roboto', monospace;
+    /*background-color: red;*/
+}
+
+.error-message {
+    width: 100%;
+    text-align: center;
+    color: var(--accent-color-dark);
+    font-size: 3.5rem;
+
+}
+
+/* _____ INPUT _____ */
+.user-input {
+    height: 20%;
+    border-radius:  0 0 10px 10px;
+}
+
+
+.pj-input {
+    font-size: 2.5rem;
+    font-family: 'Monaco', 'Roboto', monospace;
+    text-align: center;
+    border-radius: 25px !important;
+    background-color: var(--backgound-color);
+    color: var(--text-color-dark);
+}
+
+
+.pj-buttons {
+    justify-content: space-evenly;
+}
+
+
+.pj-buttons > li {
+    width: 50%;
+}
+
+
+.pj-button, .pj-input {
+    width: 80%;
+    height: 80%;
+    min-height: 80%;
+    min-width: 80%;
+    border: none;
+}
+
+.text-input {
+    font-size: 1.5rem !important;
+    text-align: left;
+    padding-left: 2.5rem;
+    padding-top: 1.5rem;
+}
+
+.pj-button {
+    background-color: var(--text-color-light);
+    border-radius: 15px;
+    color: var(--backgound-color);
+    letter-spacing: 0.2rem;
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+
+.pj-button:hover {
+    background-color: var(--text-color-dark);
+    color: white;
+}
+
+
+
+/* .......... CASH */
+
+.coins {
+    text-align: left !important;
+    font-size: 2rem;
+}
+
+.total-coins {
+    text-align: left;
+    font-size: 3rem;
+    margin-top: 2rem;
+}
+
+.coins, .total-coins {
+    /*border: 1px solid red;*/
+    width: 100%;
+    padding-left: 2rem; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ............................................................. */
+/* ..........MEDIA QUERY..................................... */
+
+
+@media (max-width: 1330px) {
+
+   section {
+    width: 90% !important;
+    height: 60vh !important;
+    margin-bottom: 15vh;
+   }
+
+   #projects-list {
+    width: 20%;
+   }
+    
+   #projects-container > h1 {
+    width: 90%;
+    text-align: left;
+    letter-spacing: 0.45rem;
+    font-size: 4rem;
+   }
+
+   .pj-list {
+    width: 90%;
+   }
+
+   .pj-link {
+    font-size: 1.8rem !important;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    padding: 0.5rem;
+   }
+
+}

@@ -1,0 +1,138 @@
+:root {
+    --primary-color: #83E7C7;
+    --secondary-color: #22B989;
+    --light-color: #C0F7E5;
+    --medium-color: #125941;
+    --dark-color: #003323;
+
+    --accent-color-light: #FFC107;
+    --accent-color-medium: #ffa007;
+    --accent-color-dark: #ff7f07;
+
+    --text-color-light: #414141;
+    --text-color-medium: #272727;
+    --text-color-dark:  #151515;
+
+    --backgound-color: #e4e4e4;
+    --footer-color: #aeaeae;
+}
+
+
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    /*border: 2px solid red;*/
+    box-sizing: border-box;
+}
+
+
+html {
+    font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: gray;
+}
+
+
+body {
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+header, main, footer {
+    width: 100%;
+}
+
+/* __________COMMON CLASSES__________ */
+
+.link {
+    text-decoration: none;
+    color: white;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+/* ............................................................. */
+/* ..........HEADER SECTION..................................... */
+
+
+header {
+    height: 6rem;
+    background-color: var(--text-color-medium);
+}
+
+#logo {
+    width: 8%;
+}
+
+.header-logo {
+    color: var(--accent-color-light);
+}
+
+
+#navbar {
+    height: 6rem;
+    width: 60%;
+    position: absolute;
+    right: 0;
+}
+
+#nav-link-container {
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+
+}
+
+.section-link {
+    width: 25%;
+    height: 100%;
+    list-style: none;
+}
+
+.section-link > a {
+    font-size: 2rem;
+    letter-spacing: 0.3rem;
+    font-weight: 550;
+    padding: 1rem;
+}
+
+
+
+/* ............................................................. */
+/* ..........MAIN SECTION....................................... */
+
+main {
+    /*height: calc(100vh - 6rem);*/
+    background-color: var(--backgound-color);
+}
+
+
+
+
+/* ............................................................. */
+/* ..........FOOTER SECTION..................................... */
+
+/*footer {
+    height: 5rem;
+    background-color: var(--footer-color);
+}*/
+
+
+
+
+
+/* ............................................................. */
+/* ..........MEDIA QUERY..................................... */

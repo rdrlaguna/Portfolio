@@ -350,25 +350,22 @@ function calculateCardType(checksum, input, len) {
     if (checksum !== 0)
     {
         return 'INVALID';
-    } else {
+    }
+    
+    
+    switch (true) {
 
-        if (len === 15 && (start == 34 || start == 37)) {
-
+        case (len === 15 && (start == 34 || start == 37)):
             return 'AMERICAN';
-
-        } else if (len === 16 && start >= 51 && start <= 55) {
-
+        
+        case (len === 16 && start >= 51 && start <= 55):
             return 'MASTERCARD';
 
-        } else if ((len === 13 || len === 16) && start >= 40 && start <= 49) {
-            
+        case ((len === 13 || len === 16) && start >= 40 && start <= 49):            
             return 'VISA';
-
-        } else {
-
+        
+        default:
             return 'INVALID';
-
-        }
     }
 
 }

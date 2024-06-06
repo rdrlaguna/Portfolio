@@ -94,13 +94,6 @@ header {
     justify-content: end;
 }
 
-#logo {
-    width: 8%;
-}
-
-.header-logo {
-    color: var(--accent-color-light);
-}
 
 
 #navbar {

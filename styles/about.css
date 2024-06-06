@@ -1,53 +1,67 @@
 
-/*
-* {
+
+/*main * {
   border: 1px solid red;
 }*/
 
-main{
-    /*position: relative;*/
-    height: 100vh;
+body {
     overflow: hidden;
 }
 
-
-
-/* __________MISION SECTION__________ */
-
-#mission {
-    width: 30%;
-    background-color: #cfcfcf;
-    border-radius: 10px;
-    padding: 1rem;
-    font-size: 1.6rem;
-    font-style: italic;
-    /*position: absolute;
-    right: 10%;
-    top: 5%;*/
-    align-self: end;
-    margin: 5% 10% 0 0;
-    
-    
+.frame {
+    width: 65%;
+    height: 70%;
 }
 
 
 
-/* __________ABOUT SECTION__________ */
+/* ******************** ABOUT SECTION ******************** */
 
-#about {
-    width: 100%;
+#about-section {
+    width: 80%;
     height: 100%;
-   /* position: absolute;*/
-    top: 0;
+    background-color: rgba(130, 130, 130, 0.3);;
 }
 
-.text-container {
-    width: 60%;
-    font-size: 2rem;
+.title-container {
+    width: 100%;
+    height: 20%;
 }
 
-.title {
-    font-size: 4rem;
+#title {
+    margin: -2rem 0 0 -2rem;
+    transform: scale(1,2);
+
+    font-size: 12rem;
+    letter-spacing: 1.5rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 300;
+
+    color: rgba(240, 240, 240, 0.9);
+}
+
+.info-container {
+    width: 100%;
+    height: 80%;
+    align-items: end;
+    position: relative;
+}
+
+.bio-container {
+    width: 70%;
+    height: 100%;
+    margin: 0 0 -6rem 6rem;
+    padding: 2rem;
+    
+    background-color: rgba(100, 100, 100, 0.3);
+}
+
+#bio {
+    text-align: justify;
+    letter-spacing: 0.2rem;
+    font-size: 2.1rem;
+    color: rgba(70, 70, 70, 0.8);
+
 }
 
 .bio {
@@ -56,33 +70,116 @@ main{
     margin-bottom: 4rem;
 }
 
+.banner-container{
+    position: absolute;
+    right: 0;
+    height:100%;
+    width: 10%;
+    justify-content: end;
+    align-items: end;
+}
 
-/* __________ICON SECTION__________ */
+#banner {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    margin: 0 0.6rem 0.8rem 0;
+
+    font-size: 4rem;
+    letter-spacing: 0.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    color: rgba(105, 105, 105, 0.8);
+}
+
+
+
+/* ******************** TECHNOLOGIES SECTION ******************** */
+
+#technologies-section {
+    width: 20%;
+    height: 100%;
+}
+
+.technologies-list {
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
 
 .program-icon {
-    width: 16%;
+    width: 100%;
+    font-size: 1.5rem;
     list-style: none;
     text-align:center;
-    color: #22B989;
-    opacity: 45%;
+    color: rgba(63, 139, 117, 0.8);
 }
 
 .active-icon {
-    color: #125941;
-    opacity: 75%;
+    color: rgba(26, 59, 50, 1);
 }
 
-/* .................... MEDIA QUERIES .................... */
+
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+/* ......................... MEDIA QUERIES ......................... */
 
 @media (max-width: 1330px){
-
-    #mission {
-        width: 40%;
-        font-size: 1.5rem;
+    #about-section {
+        width: 85%;
     }
 
-    .text-container {
+    #technologies-section {
+        width: 15%;
+    }
+
+    .frame {
+        width: 90%;
+        height: 70%;
+    }
+
+    #title {
+        font-size: 11rem;
+    }
+
+    .bio-container {
         width: 80%;
+        height: 100%;
+    
+        margin: 0 0 -6rem 3rem;
     }
 
+    #bio {
+        font-size: 2rem;;
+    }
+
+}
+
+
+
+@media (max-width: 950px) {
+
+    #bio {
+        font-size: 1.8rem;
+    }
+}
+
+
+
+@media (max-width: 750px) {
+
+    #title {
+        font-size: 9rem;
+    }
+
+    .bio-container {
+        height: 110%;
+    }
+
+    #bio {
+        font-size: 1.6rem;
+    }
+
+    .program-icon {
+        font-size: 1.2rem;
+    }
 }

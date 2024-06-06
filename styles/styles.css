@@ -21,13 +21,12 @@
 *, ::after, ::before {
     margin: 0;
     padding: 0;
-    /*border: 2px solid red;*/
     box-sizing: border-box;
 }
 
 
 html {
-    font-size: 62.5%;
+    font-size: 70%;
     font-family: Arial, Helvetica, sans-serif;
     color: gray;
 }
@@ -35,6 +34,7 @@ html {
 
 body {
     width: 100%;
+    height: 100vh;
     justify-content: flex-start;
     align-items: center;
 }
@@ -43,6 +43,26 @@ body {
 header, main, footer {
     width: 100%;
 }
+
+
+main {
+    height: 92%;
+    background: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhormeqwo3kh8E7kJ8ftXGP2Oa8U6RhW9G3g6hvShf6THY9EesCqOOykJN9iIiYSdNIwK9oyGRSggxqt_yyEWt8dGM2qtXf7mrh6yRuosIrVgZ0K9sbOS6dIxdYbcTv96YOb8jZOpGa2A/s1600/Concrete+wall+smooth+pillar+texture.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.gradient {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg,
+                 rgba(220, 220, 220, 0.8) 0%,
+                 rgba(160, 160, 160, 0.8) 100%);
+}
+
+
 
 /* __________COMMON CLASSES__________ */
 
@@ -69,8 +89,9 @@ header, main, footer {
 
 
 header {
-    height: 6rem;
+    height: 8%;
     background-color: var(--text-color-medium);
+    justify-content: end;
 }
 
 #logo {
@@ -83,10 +104,8 @@ header {
 
 
 #navbar {
-    height: 6rem;
+    height: 100%;
     width: 60%;
-    position: absolute;
-    right: 0;
 }
 
 #nav-link-container {
@@ -112,27 +131,17 @@ header {
 
 
 /* ............................................................. */
-/* ..........MAIN SECTION....................................... */
+/* ..........MEDIA QUERY..................................... */
 
-main {
-    /*height: calc(100vh - 6rem);*/
-    background-color: var(--backgound-color);
+
+@media (max-width: 1000px) {
+    #navbar {
+        width: 100%;
+    }
 }
 
-
-
-
-/* ............................................................. */
-/* ..........FOOTER SECTION..................................... */
-
-/*footer {
-    height: 5rem;
-    background-color: var(--footer-color);
-}*/
-
-
-
-
-
-/* ............................................................. */
-/* ..........MEDIA QUERY..................................... */
+@media (max-width: 750px) {
+    .section-link > a {
+        font-size: 1.5rem;
+    }
+}

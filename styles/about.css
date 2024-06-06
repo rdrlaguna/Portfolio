@@ -1,29 +1,44 @@
 
-/*
+
 * {
   border: 1px solid red;
-}*/
+}
 
-main{
-    /*position: relative;*/
-    height: 100vh;
+body {
     overflow: hidden;
 }
 
+main{
+    height: 100vh;
+    background: url(https://thumbs.dreamstime.com/b/la-texture-blanche-de-mur-mod%C3%A8le-abstrait-ondulent-le-fond-moderne-et-g%C3%A9om%C3%A9trique-onduleux-couche-chevauchement-99647581.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
+.gradient {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg,
+                 rgba(216, 216, 216, 0.3) 0%,
+                 rgba(0, 0, 0, 0.5) 100%);
+}
+
+
+.frame {
+    width: 80%;
+    height: 70%;
+}
 
 /* __________MISION SECTION__________ */
 
 #mission {
-    width: 30%;
+    width: 100%;
     background-color: #cfcfcf;
     border-radius: 10px;
     padding: 1rem;
     font-size: 1.6rem;
     font-style: italic;
-    /*position: absolute;
-    right: 10%;
-    top: 5%;*/
     align-self: end;
     margin: 5% 10% 0 0;
     
@@ -35,19 +50,31 @@ main{
 /* __________ABOUT SECTION__________ */
 
 #about {
-    width: 100%;
+    width: 80%;
     height: 100%;
-   /* position: absolute;*/
-    top: 0;
+    background-color: rgba(190, 190, 190, 0.8);
+}
+
+#title {
+    width: 100%;
+    height: 30%;
 }
 
 .text-container {
     width: 60%;
-    font-size: 2rem;
+    margin: 6rem 0 0 6rem;
+    font-size: 1.8rem;
+    color: rgb(55, 55, 55);
+    background-color: rgba(160, 160, 160, 0.8);
 }
 
-.title {
-    font-size: 4rem;
+.section-title {
+    margin: -5rem 0 0 -4rem;
+
+    font-size: 12rem;
+    letter-spacing: 0.5rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 550;
 }
 
 .bio {
@@ -58,9 +85,20 @@ main{
 
 
 /* __________ICON SECTION__________ */
+#tech {
+    width: 20%;
+    height: 100%;
+}
+
+.languages {
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
 
 .program-icon {
-    width: 16%;
+    width: 100%;
+    font-size: 1.5rem;
     list-style: none;
     text-align:center;
     color: #22B989;

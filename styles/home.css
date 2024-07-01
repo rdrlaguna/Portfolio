@@ -14,9 +14,10 @@ body {
 /* ------------------------------------ FRAME -----------------------------------------*/
 
 .frame {
+    margin-top: 14vh;
     width:60%;
     height: 75%;
-    background-color: rgba(130, 130, 130, 0.3);
+    background-color: var(--frame-color-0);
 
     animation: frame 3s ease-in forwards;
 }
@@ -37,7 +38,7 @@ body {
 /* ******************** LEFT FRAME ******************** */
 .name-container {
     height: 50%;
-    font-family: serif;
+    font-family: "Forum", serif;
 }
 
 .name-animation, .surname-animation {
@@ -54,9 +55,9 @@ body {
     font-size: 10rem;
     font-weight: 300;
     transform: scale(1,2);
-    padding-top: 1rem;
+    padding-top: 1.5rem;
 
-    color: rgba(63, 139, 117, 1);
+    color: var(--primary-color);
 
     animation: name 1s linear forwards
 }
@@ -64,7 +65,8 @@ body {
 #surname {
     margin-top: -16rem;
     font-size: 8rem;
-    color: rgb(26, 59, 50);
+    letter-spacing: 0.5rem;
+    color: var(--secondary-color);
 
     animation: surname 1s linear 1s forwards;
 }
@@ -81,7 +83,7 @@ body {
     font-style: italic;
     font-family: Arial, Helvetica, sans-serif;
 
-    color: rgba(80, 80, 80, 0.8);
+    color: var(--text-color-0);
 
     animation: mission 4s ease-in-out 1s forwards
 }
@@ -107,7 +109,7 @@ body {
     font-size: monospace;
     font-size: 4.5rem;
 
-    color: rgba(220, 220, 220, 0.8);
+    color: var(--text-color-1);
 }
 
 
@@ -196,7 +198,7 @@ body {
 /* Frame animation - Frame element slowly appears */
 @keyframes frame {
     0% {background-color: rgba(130, 130, 130, 0);}
-    100% {background-color: rgba(130, 130, 130, 0.3);}
+    100% {background-color: var(--frame-color-0);}
 }
 
 

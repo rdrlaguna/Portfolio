@@ -10,7 +10,8 @@ body {
 
 .frame {
     width: 65%;
-    height: 70%;
+    height: 60%;
+    margin-top: 5vh;
 }
 
 
@@ -20,7 +21,7 @@ body {
 #about-section {
     width: 80%;
     height: 100%;
-    background-color: rgba(130, 130, 130, 0.3);;
+    background-color: var(--frame-color-0);
 }
 
 .title-container {
@@ -29,15 +30,15 @@ body {
 }
 
 #title {
-    margin: -2rem 0 0 -2rem;
+    margin: -4rem 0 0 29rem;
     transform: scale(1,2);
 
-    font-size: 12rem;
+    font-size: 14rem;
     letter-spacing: 1.5rem;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: "Forum", serif;
     font-weight: 300;
-
-    color: rgba(240, 240, 240, 0.9);
+    
+    color: var(--text-color-2);
 }
 
 .info-container {
@@ -53,14 +54,14 @@ body {
     margin: 0 0 -6rem 6rem;
     padding: 2rem;
     
-    background-color: rgba(100, 100, 100, 0.3);
+    background-color: var(--frame-color-1);
 }
 
 #bio {
     text-align: justify;
     letter-spacing: 0.2rem;
     font-size: 2.1rem;
-    color: rgba(70, 70, 70, 0.8);
+    color: var(--text-color-3);
 
 }
 
@@ -88,7 +89,7 @@ body {
     letter-spacing: 0.5rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
-    color: rgba(105, 105, 105, 0.8);
+    color: var(--text-color-4);
 }
 
 
@@ -111,11 +112,14 @@ body {
     font-size: 1.5rem;
     list-style: none;
     text-align:center;
-    color: rgba(63, 139, 117, 0.8);
+    
+    color: var(--primary-color);
 }
 
+
+
 .active-icon {
-    color: rgba(26, 59, 50, 1);
+    color: var(--secondary-color);
 }
 
 
@@ -133,17 +137,18 @@ body {
     }
 
     .frame {
-        width: 90%;
-        height: 70%;
+        width: 85%;
+        height: 60%;
     }
 
     #title {
-        font-size: 11rem;
+        font-size: 10rem;
+        margin: -3rem 0 0 19rem;
     }
 
     .bio-container {
         width: 80%;
-        height: 100%;
+        height: 110%;
     
         margin: 0 0 -6rem 3rem;
     }

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Rodrigo Laguna</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="" />
+        <link rel="stylesheet" href="../styles/styles.css" />
+        <link rel="stylesheet" href="../styles/galleryTest.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/dd94205240.js" crossorigin="anonymous"></script>
+        <script src="../script/script.js"></script>
+        <script src="../script/gallery.js"></script>
+    </head>
+
+    <!-- ********************************************************** -->
+
+    <body class="flex-container flex-column">
+        <!-- ..........HEADER SECTION.............................. -->
+        <!-- ...................................................... -->
+        <header class="flex-container">
+            <nav id="navbar">
+                <ul id="nav-link-container" class="flex-container">
+                    <li class="section-link"><a class="link" href="../index.html">HOME</a></li>
+                    <li class="section-link"><a class="link" href="./about.html">ABOUT</a></li>
+                    <li class="section-link"><a class="link" href="./galleryTest.html">GALLERY</a></li>
+                    <li class="section-link"><a class="link" href="./contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- ..........MAIN SECTION................................ -->
+        <!-- ...................................................... -->
+        <main>
+            <div class="background-image">
+                <div class="gradient flex-container flex-column">
+
+                    <div id="project-nav">
+                        <ul class="project-list flex-container">
+                            <li><a class="project-link" id="mario" href="#mario-section">MARIO</a></li>
+                            <li><a class="project-link" id="mario" href="#cash-section">CASH</a></li>
+                            <li><a class="project-link" id="mario" href="#credit-section">CREDIT</a></li>
+                            <li><a class="project-link" id="mario" href="#caesar-section">CAESAR</a></li>
+                        </ul>
+                    </div>
+
+                <!-- **********************************************--> 
+                <!-- *************** MARIO ************************--> 
+                    <section id="mario-section" class="project-section flex-container flex-center">
+                        <div class="project-frame flex-container">
+                            <div class="project-title flex-container">
+                                <h1 id="mario" class="title">MARIO</h1>
+                            </div>
+                        
+
+                            <div class="project-data">
+                            <!--____________OUTPUT_____________-->
+                                <div class="project-output  flex-container">
+                                    <div class="output-frame flex-container flex-center flex-column">
+                                        <div class="output-field" id="mario-output">
+                                            <!--Insert project output with JavaScript-->
+                                        </div>
+                                        <button class="clear-button" id="mario-clear">CLEAR</button>
+                                    </div>
+
+                                    <div class="instructions-container flex-container flex-column">
+                                        <h3 class="project-subtitle">Pyramid generator</h3>
+                                        <p class="project-instructions">
+                                            This program recreates a pyramid using hases(#) for bricks.
+                                            <br><br> 
+                                            Introduce a number between 1 and 8 for the pyramid's height
+                                            and click the <strong>RUN</strong> button to see your pyramid.
+                                        </p>
+                                    </div>
+                                </div>
+
+
+                            <!--____________INPUT_____________-->
+                                <div class="project-input flex-container">
+                                    <div class="input-container flex-container flex-center">
+                                        <div class="input-right flex-container">
+                                            <input type="text" value="" class="input-field" id="mario-input" placeholder="Write here..." />
+                                            <button class="submit-button" id="mario-submit">RUN</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+
+
+                <!-- **********************************************--> 
+                <!-- *************** CASH ************************--> 
+                <section id="cash-section" class="project-section flex-container flex-center">
+                    <div class="project-frame flex-container">
+                        <div class="project-title flex-container">
+                            <h1 id="cash" class="title">CASH</h1>
+                        </div>
+                    
+
+                        <div class="project-data">
+                        <!--____________OUTPUT_____________-->
+                            <div class="project-output  flex-container">
+                                <div class="output-frame flex-container flex-center flex-column">
+                                    <div class="output-field" id="cash-output">
+                                        <!--Insert project output with JavaScript-->
+                                    </div>
+                                    <button class="clear-button" id="cash-clear">CLEAR</button>
+                                </div>
+
+                                <div class="instructions-container flex-container flex-column">
+                                    <h3 class="project-subtitle">Coin counter</h3>
+                                    <p class="project-instructions">
+                                        This program prints the minimum coins needed to make the given
+                                        amount of change in cents.
+                                        <br><br> 
+                                        Introduce a whole number greater than zero. Recall that 
+                                        the number cannot be a decimal, since we are counting cents.
+                                    </p>
+                                </div>
+                            </div>
+
+
+                        <!--____________INPUT_____________-->
+                            <div class="project-input flex-container">
+                                <div class="input-container flex-container flex-center">
+                                    <div class="input-right flex-container">
+                                        <input type="text" value="" class="input-field" id="cash-input" placeholder="Write here..." />
+                                        <button class="submit-button" id="cash-submit">RUN</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- **********************************************--> 
+                <!-- *************** CREDIT ************************--> 
+                    <section id="credit-section" class="project-section flex-container flex-center">
+                        <div class="project-frame flex-container">
+                            <div class="project-title flex-container">
+                                <h1 id="credit" class="title">CREDIT</h1>
+                            </div>
+                        
+    
+                            <div class="project-data">
+                            <!--____________OUTPUT_____________-->
+                                <div class="project-output  flex-container">
+                                    <div class="output-frame flex-container flex-center flex-column">
+                                        <div class="output-field" id="credit-output">
+                                            <!--Insert project output with JavaScript-->
+                                        </div>
+                                        <button class="clear-button" id="credit-clear">CLEAR</button>
+                                    </div>
+    
+                                    <div class="instructions-container flex-container flex-column">
+                                        <h3 class="project-subtitle">Card validator</h3>
+                                        <p class="project-instructions">
+                                            This program checks the validity of a given credit card number.
+                                            <br><br> 
+                                            Introduce a credit card number and press the <strong>RUN</strong>
+                                            button to check whether if it is a valid American Express, 
+                                            MasterCard, or Visa card number.
+                                        </p>
+                                    </div>
+                                </div>
+    
+    
+                            <!--____________INPUT_____________-->
+                                <div class="project-input flex-container">
+                                    <div class="input-container flex-container flex-center">
+                                        <div class="input-right flex-container">
+                                            <input type="text" value="" class="input-field" id="credit-input" placeholder="Write here..." />
+                                            <button class="submit-button" id="credit-submit">RUN</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                <!-- **********************************************--> 
+                <!-- *************** CAESAR ************************--> 
+                    <section id="caesar-section" class="project-section flex-container flex-center">
+                        <div class="project-frame flex-container">
+                            <div class="project-title flex-container">
+                                <h1 id="caesar" class="title">CAESAR</h1>
+                            </div>
+                        
+    
+                            <div class="project-data">
+                            <!--____________OUTPUT_____________-->
+                                <div class="project-output  flex-container">
+                                    <div class="output-frame flex-container flex-center flex-column">
+                                        <div class="output-field" id="caesar-output">
+                                            <!--Insert project output with JavaScript-->
+                                        </div>
+                                        <button class="clear-button" id="caesar-clear">CLEAR</button>
+                                    </div>
+    
+                                    <div class="instructions-container flex-container flex-column">
+                                        <h3 class="project-subtitle">Text cipher</h3>
+                                        <p class="project-instructions">
+                                            This program enables you to encrypt messages using Caesar's cipher. 
+                                            <br><br> 
+                                            Introduce a whole number followed by the text you want to cipher.
+                                            The number would be the key the program will use to cipher your text.
+                                            Separate the number and the text using a space: <strong>key text</strong>.
+
+                                        </p>
+                                    </div>
+                                </div>
+    
+    
+                            <!--____________INPUT_____________-->
+                                <div class="project-input flex-container">
+                                    <div class="input-container flex-container flex-center">
+                                        <div class="input-right flex-container">
+                                            <input type="text" value="" class="input-field" id="caesar-input" placeholder="Write here..." />
+                                            <button class="submit-button" id="caesar-submit">RUN</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+
+                </div>
+            </div>
+        </main>
+
+        <!-- ..........FOOTER SECTION.............................. -->
+        <!-- ...................................................... -->
+        <footer>
+
+        </footer>
+
+    </body>
+
+</html>

@@ -1,0 +1,175 @@
+
+/*main * {
+    border: 2px solid red;
+}*/
+
+.frame {
+    margin-top: 15vh;
+    width: 60%;
+    height: 70vh;
+}
+
+#contact-section, #form {
+    flex-grow: 1;
+}
+
+
+#title {
+    text-align: right;
+    margin: -2rem -2.5rem 0 0;
+    transform: scale(1,2);
+
+    font-size: 14rem;
+    letter-spacing: 1.5rem;
+    font-family: "Forum", serif;
+    font-weight: 300;
+    
+    color: var(--text-color-2);
+}
+
+.form-container {
+    height: calc(100% - 10rem);
+    background-color: var(--frame-color-0);
+    flex-direction: row-reverse;
+}
+
+.cta {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    padding-top: 1rem;
+    font-size: 3rem;
+    font-family: monospace;
+}
+
+
+
+/* ******************** FORM SECTION ******************** */
+
+#form {
+    align-items: center;
+}
+
+.form-inputs{
+    width: 80%;
+    height: 80%;
+    margin: 4rem 0 0 0;
+    gap: 2rem;
+}
+
+fieldset {
+    border:none;
+    border-bottom: 2px solid rgba(80, 80, 80, 0.3);
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2.5rem;
+    font-size: 2rem;
+    color: rgba(90, 90, 90, 1);
+}
+
+
+#email, #name, #dropdown, #message {
+    border-radius: 5px;
+    padding-left: 1rem;
+    margin-top: 0.3rem;
+    border: none;
+
+    background-color: rgba(230, 230, 230, 0.8);;
+}
+
+#email, #name, #dropdown {
+    height: 3rem;
+}
+
+#message {
+    padding-top: 1rem;
+}
+
+#submit {
+    width: 15rem;
+    margin: 0 auto;
+
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.5rem;
+    border-radius: 25px;
+
+    color: rgba(230, 230, 230, 0.8);
+    box-shadow: 3px 5px 5px rgba(60, 60, 60, 0.4);
+    border: 1px solid var(--text-color-0);
+    background-color: var(--primary-color);
+}
+
+#submit:hover {
+    width: 16rem;
+    font-size: 2.1rem;
+    background-color: var(--secondary-color);
+}
+
+
+
+/* ******************** MEDIA ICONS ******************** */
+
+#media-section {
+    transform: translateY(3vh);
+    width: 30%;
+    height: 8vh;
+}
+
+.media-list {
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.program-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% / 6);
+}
+
+.program-icon > a {
+    text-decoration: none;   
+}
+
+.program-icon > a > i {
+    font-size: 3rem;
+    color: var(--secondary-color);
+}
+
+.program-icon > a > i:hover {
+    font-size: 4.5rem;
+    color: var(--primary-color);
+}
+
+
+
+
+
+
+
+
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+/* ......................... MEDIA QUERIES ......................... */
+
+@media (max-width: 1400px) {
+    .frame {
+        width: 80%;
+    }
+
+    .form-container {
+        height: calc(100% - 7.5rem);
+    }
+
+    #title { 
+        font-size: 10rem;
+    }
+
+    #media-section {
+        transform: translateY(2vh);
+        width: 50%;
+    }
+}

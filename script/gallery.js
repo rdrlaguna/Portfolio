@@ -3,8 +3,8 @@
 document.addEventListener('DOMContentLoaded', function() {
 
         // Find all butons
-        let clearButtons = document.querySelectorAll('.pj-clear');
-        let submitButtons = document.querySelectorAll('.pj-submit');
+        let clearButtons = document.querySelectorAll('.clear-button');
+        let submitButtons = document.querySelectorAll('.submit-button');
 
 
 
@@ -64,8 +64,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 } else if (projectName === 'credit'){
                     outputContainer = credit(userInput, outputContainer);
 
-                } else if (projectName === 'readability'){
-                    outputContainer = readability(userInput, outputContainer);
+                } else if (projectName === 'caesar'){
+                    outputContainer = caesar(userInput, outputContainer);
 
                 } else {
 
@@ -374,7 +374,67 @@ function calculateCardType(checksum, input, len) {
 
 
 // ...........................................................
-// .................... READABILITY ..........................
-function readability(userInput, outputContainer) {
+// .................... CAESAR ..........................
+function caesar(userInput, outputContainer) {
+
+
+    // Get key
+    var inputList = userInput.split(" ");
+    var key = parseInt(inputList.shift());
+  
+    // Key validation
+   if (isNaN(key)) {
+        //alert("wrong key");
+        outputContainer.append(insertErrorMessage());
+
+        return outputContainer;
+   }
+
+   // Reduce key to a number less than 26
+   while (key > 26) {
+    key -= 26
+   }
+    
+
+    // Get plain text
+    let text = inputList.toString();
+    var plainText = text.replace(/,/g, " ");
+
+
+    // Rotate each character
+    let cipherText = ""
+    for (let i = 0; i < plainText.length; i++){
+        let newChar = rotateChar(plainText[i], key);
+        console.log(newChar);
+        cipherText += newChar;
+    }
+
+    const pTag = document.createElement('p')
+    pTag.innerHTML = cipherText;
+    outputContainer.append(pTag); 
+    return outputContainer;
+
+}
+
+// Rotate each char key number of times
+function rotateChar(letter, key) {
+
+    let asciiValue = letter.charCodeAt(0);
+
+    // If letter is alpha
+    if (letter >= "a" && letter <= "z" ||
+        letter >= "A" && letter <= "Z") {
+            // Check if the asccii values of the letter + k are > than "z" or "z"
+            if ((asciiValue <= 120 && (asciiValue + key) > 122) ||
+                (asciiValue <= 90 && (asciiValue + key) > 90)) {
+                return String.fromCharCode((asciiValue + key) - 26);
+            } else {
+                return String.fromCharCode((asciiValue + key));
+            }            
+
+    } else {
+        // If letter is not alpha return letter
+        return letter;
+    }
 
 }

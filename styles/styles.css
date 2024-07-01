@@ -1,20 +1,24 @@
 :root {
-    --primary-color: #83E7C7;
-    --secondary-color: #22B989;
-    --light-color: #C0F7E5;
-    --medium-color: #125941;
-    --dark-color: #003323;
+    
+    --primary-color: rgba(63, 139, 117, 1);
+    --secondary-color: rgba(26, 59, 50, 1);
+    --terciary-color: rgb(74, 179, 149);
 
-    --accent-color-light: #FFC107;
-    --accent-color-medium: #ffa007;
-    --accent-color-dark: #ff7f07;
 
-    --text-color-light: #414141;
-    --text-color-medium: #272727;
-    --text-color-dark:  #151515;
+    --text-color-0: rgba(80, 80, 80, 0.8);
+    --text-color-1: rgba(220, 220, 220, 0.8);
+    --text-color-2:  rgba(240, 240, 240, 0.9);
+    --text-color-3: rgba(70, 70, 70, 0.8);
+    --text-color-4: rgba(105, 105, 105, 0.8);
 
-    --backgound-color: #e4e4e4;
-    --footer-color: #aeaeae;
+    --frame-color-0:  rgba(130, 130, 130, 0.3);
+    --frame-color-1: rgba(100, 100, 100, 0.3);
+    --frame-color-2: rgba(65, 65, 65, 1);
+
+    --header-color-0: #151515;
+    --header-color-1: rgba(39, 39, 39, 1);
+    --header-color-2: #414141;
+
 }
 
 
@@ -46,7 +50,7 @@ header, main, footer {
 
 
 main {
-    height: 92%;
+    height: 100vh;
     background: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhormeqwo3kh8E7kJ8ftXGP2Oa8U6RhW9G3g6hvShf6THY9EesCqOOykJN9iIiYSdNIwK9oyGRSggxqt_yyEWt8dGM2qtXf7mrh6yRuosIrVgZ0K9sbOS6dIxdYbcTv96YOb8jZOpGa2A/s1600/Concrete+wall+smooth+pillar+texture.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -89,9 +93,11 @@ main {
 
 
 header {
-    height: 8%;
-    background-color: var(--text-color-medium);
+    position: fixed;
+    height: 6vh;
+    background-color: var(--header-color-1);
     justify-content: end;
+    z-index: 1;
 }
 
 
@@ -109,16 +115,19 @@ header {
 }
 
 .section-link {
+    display: flex;
     width: 25%;
     height: 100%;
     list-style: none;
 }
 
 .section-link > a {
+    flex-grow: 1;
+    text-align: center;
     font-size: 2rem;
     letter-spacing: 0.3rem;
     font-weight: 550;
-    padding: 1rem;
+    padding-top: calc((6vh - 2rem) / 2);
 }
 
 

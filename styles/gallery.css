@@ -1,27 +1,19 @@
-:root {
-    --primary-color: #83E7C7;
-    --secondary-color: #22B989;
-    --light-color: #C0F7E5;
-    --medium-color: #125941;
-    --dark-color: #003323;
-
-    --accent-color-light: #FFC107;
-    --accent-color-medium: #ffa007;
-    --accent-color-dark: #ff7f07;
-
-    --text-color-light: #414141;
-    --text-color-medium: #272727;
-    --text-color-dark:  #151515;
-
-    --backgound-color: #e4e4e4;
-    --footer-color: #aeaeae;
-}
-
 
 
 main * {
     /*border: 1px solid red;*/
+    height: 200;
     position: relative;
+}
+
+
+.background-image {
+    width: 100%;
+    height: 600vh;
+    background: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhormeqwo3kh8E7kJ8ftXGP2Oa8U6RhW9G3g6hvShf6THY9EesCqOOykJN9iIiYSdNIwK9oyGRSggxqt_yyEWt8dGM2qtXf7mrh6yRuosIrVgZ0K9sbOS6dIxdYbcTv96YOb8jZOpGa2A/s1600/Concrete+wall+smooth+pillar+texture.jpg);
+    background-position: center;
+    background-repeat: repeat;
+    background-size: contain;
 }
 
 
@@ -103,18 +95,37 @@ main * {
 .pj-container{
     width: 100%;
     height: 100%;
+    
 }
 
+.pj-frame {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(130, 130, 130, 0.3);
+}
+
+.upper-frame {
+    width: 100%;
+    height: 80%;
+}
 
 .pj-title {
-    font-size: 6rem;
-    height: 20%;
-    padding: calc((20% - 6rem) / 2) 0 calc((20% - 6rem) / 2) 0 ;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    font-size: 10rem;
+    height: 100%;
+    font-family: serif;
+
+    color: rgba(240, 240, 240, 0.9);
+}
+
+#readability-title {
+    font-size: 8rem;
 }
 
 .pj-info {
     width: 100%;
-    height: 60%;
+    height: 100%;
     font-size: 1.3rem;
     text-align: justify;
     letter-spacing: 0.2rem;
@@ -124,18 +135,22 @@ main * {
 
 
 
-.pj-info, .user-input {
-    background-color: #c8c8c8;
-    padding: 2rem;
-}
-
-.pj-details,.output,
-.pj-input-container, .pj-buttons {
+.output,
+.pj-input-container, .pj-buttons,
+.pj-details-container {
     width: 50%;
 }
 
+.pj-details-container > h3 {
+    padding: 0.5rem 0 0 1rem;
+    font-size: 3rem;
+    font-family: monospace;
+    color: rgba(63, 139, 117, 1);
+}
 
-
+.pj-details {
+    padding: 2rem;
+}
 
 
 /* _____ OUTPUT _____ */
@@ -146,11 +161,11 @@ main * {
 
 
 .output-field {
-    width: 80%;
+    width: 90%;
     height: 90%;
     background-color: var(--text-color-light);
     border-radius: 10px;
-    margin:0 auto;
+    margin: -2rem auto 0 auto;
 
 }
 
@@ -174,7 +189,7 @@ main * {
 /* _____ INPUT _____ */
 .user-input {
     height: 20%;
-    border-radius:  0 0 10px 10px;
+    margin: 3rem 0 0 0;
 }
 
 
@@ -275,12 +290,43 @@ main * {
 
 @media (max-width: 1330px) {
 
+    .gradient {
+        flex-direction: column;
+    }
+
+    #projects-list {
+        position: static;
+        width: 100%;
+    }
+
+    .pj-list {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .li-link {
+        height: 4rem;
+        font-size: 1.5rem;
+        text-align: center;
+        padding: calc((6rem - 3rem) / 2);
+        list-style: none;
+        background-color: #22B989;
+        opacity: 45%;
+    }
+
+
+
+    #projects-container {
+        position: unset;
+        width: 100%;
+    }
+   
    section {
     width: 90% !important;
     height: 60vh !important;
     margin-bottom: 15vh;
    }
-
+ /*
    #projects-list {
     width: 20%;
    }
@@ -302,5 +348,6 @@ main * {
     font-weight: 600;
     padding: 0.5rem;
    }
+   */
 
 }

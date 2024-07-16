@@ -25,7 +25,7 @@
 *, ::after, ::before {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box !important;
 }
 
 
@@ -111,6 +111,7 @@ header {
     width: 100%;
     height: 100%;
     justify-content: space-evenly;
+    padding: 0 !important;
 
 }
 
@@ -119,15 +120,16 @@ header {
     width: 25%;
     height: 100%;
     list-style: none;
+    align-items: center;
+    justify-content: center;
 }
 
-.section-link > a {
+.link {
     flex-grow: 1;
     text-align: center;
-    font-size: 2rem;
+    font-size: 2rem !important;
     letter-spacing: 0.3rem;
-    font-weight: 550;
-    padding-top: calc((6vh - 2rem) / 2);
+    font-family: sans-serif;
 }
 
 

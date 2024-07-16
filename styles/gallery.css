@@ -1,10 +1,7 @@
 
-
-main * {
-    /*border: 1px solid red;*/
-    height: 200;
-    position: relative;
-}
+/*main * {
+    border: 2px solid red;
+}*/
 
 
 .background-image {
@@ -16,338 +13,337 @@ main * {
     background-size: contain;
 }
 
+main {
+    height: 600vh;
+    overflow: scroll;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+    scrollbar-color: rgba(100,100,100, 1) rgba(190, 190, 190, 1);
+}
 
-/* ...................................................... */
-/* .................... PROJECT LIST .................... */
-#projects-list {
-    width: 15%;
-    height: 100;
+
+
+section {
+    width: 100%;
+    height: 100vh;
+}
+
+/******************************************************************************************/
+/***************************** P R O J E C T    N A V *************************************/
+
+#project-nav {
+    width: 20%;
+    height: 80vh;
+    margin-top: 15vh;
     position: fixed;
-
+    z-index: 1;  
+    align-self: end;
 }
 
+ .project-list {
+    flex-direction: column;
+    justify-content: start;
+    gap: 2rem;
+    list-style: none;
+    height: 50%;
+    width: 60%;
+    margin: 0 auto;
+ }
 
-.pj-list {
-    width: 80%;
-    margin: 6rem auto 0 auto;
-    gap: 1rem;
+.project-list > li {
+    display: flex;
+    height: 4.5rem;
 }
 
+ .project-link {
+    flex-grow: 1;
 
-.li-link {
-    height: 6rem;
     font-size: 3rem;
     text-align: center;
-    padding: calc((6rem - 3rem) / 2);
-    border-radius: 10px;
-    list-style: none;
-    background-color: #22B989;
-    opacity: 45%;
-}
-
-.pj-link {
-    color: var(--backgound-color);
     text-decoration: none;
-    padding: 0.8rem 2rem 0.8rem 2rem;
+    border-radius: 25px;
 
-}
+    box-shadow: 4px 8px 12px var(--text-color-0);
+    border: 1px solid rgb(42, 97, 81);
+    color: var(--text-color-2);
+    background-color: var(--primary-color);
+ }
 
-.li-link:hover {
-    background-color: #125941;
-    opacity: 65%;
-
-}
-
-
-
-
-/* ......................................................... */
-/* .................... PROJECT GALLERY .................... */
-#projects-container {
-    width: 80%;
-    padding-top: 6rem;
-    justify-content: flex-start;
-    position: absolute;
-    right: 0;
-}
+ .project-link:hover {
+    background-color: var(--secondary-color);
+ }
 
 
-#projects-container > h1 {
+
+/******************************************************************************************/
+/************************************ P R O J E C T S *************************************/
+
+.project-frame {
+    margin: 8vh 0 0 -30vh;
     width: 60%;
-    font-size: 5.5rem;
-    margin-bottom: 4rem;
-    letter-spacing: 0.4rem;
-    justify-content: space-between;
-
+    height: 70%; 
 }
 
-
-#projects-container section {
-    width: 60%;
-    height: 70vh;
-    margin-bottom: 20vh;
+.project-title {
+    width: 10%;
+    justify-content: end;
 }
 
-
-
-/* ......................................................... */
-/* .................... PROJECT SECTION .................... */
-.pj-container{
-    width: 100%;
-    height: 100%;
-    
-}
-
-.pj-frame {
-    height: 100%;
-    width: 100%;
-    background-color: rgba(130, 130, 130, 0.3);
-}
-
-.upper-frame {
-    width: 100%;
-    height: 80%;
-}
-
-.pj-title {
+.title {
     writing-mode: vertical-lr;
     transform: rotate(180deg);
+    margin: 0 -1.5rem 0 0;
+
     font-size: 10rem;
+    font-family: "Forum", serif;
+    letter-spacing: 1rem;
+    
+    color: var(--primary-color);
+}
+
+.project-data {
+    width: 90%;
+    background-color: var(--frame-color-0);
+}
+
+
+
+
+/* ------- p r o j e c t    o u t p u t -----------------------*/
+
+.project-output {
+    height: 90%;
+    flex-direction: row-reverse;
+}
+
+.instructions-container {
+    width: 40%;
     height: 100%;
-    font-family: serif;
-
-    color: rgba(240, 240, 240, 0.9);
 }
+.project-subtitle {
+    margin-top: 2rem;
+    padding-left: 2rem;
 
-#readability-title {
-    font-size: 8rem;
-}
-
-.pj-info {
-    width: 100%;
-    height: 100%;
-    font-size: 1.3rem;
-    text-align: justify;
-    letter-spacing: 0.2rem;
-    color: var(--text-color-medium);
-    border-radius: 10px 10px 0 0;
-}
-
-
-
-.output,
-.pj-input-container, .pj-buttons,
-.pj-details-container {
-    width: 50%;
-}
-
-.pj-details-container > h3 {
-    padding: 0.5rem 0 0 1rem;
     font-size: 3rem;
     font-family: monospace;
-    color: rgba(63, 139, 117, 1);
-}
-
-.pj-details {
-    padding: 2rem;
+    letter-spacing: 0.5rem;
+    color: var(--text-color-2)
 }
 
 
-/* _____ OUTPUT _____ */
-.output {
-    height: 100%;
-
+.project-instructions {
+    width: 100%;
+    flex-grow: 1;
+    font-size: 2rem;
 }
 
+.output-frame {
+    width: 60%;
+}
 
-.output-field {
-    width: 90%;
+.output-field{
+    width: 80%;
     height: 90%;
-    background-color: var(--text-color-light);
-    border-radius: 10px;
-    margin: -2rem auto 0 auto;
+    margin: -5rem 0 0 0;
+    border-radius: 15px;
+    font-family: monospace;
+    font-size: 3rem;
 
+
+    color: var(--text-color-2);
+    background-color: var(--frame-color-2);
 }
 
 .output-container {
     width: 100%;
-    height: 100%;
-    color: white;
-    font-size: 3rem;
-    font-family: 'Monaco', 'Roboto', monospace;
-    /*background-color: red;*/
-}
-
-.error-message {
-    width: 100%;
-    text-align: center;
-    color: var(--accent-color-dark);
-    font-size: 3.5rem;
-
-}
-
-/* _____ INPUT _____ */
-.user-input {
-    height: 20%;
-    margin: 3rem 0 0 0;
-}
-
-
-.pj-input {
-    font-size: 2.5rem;
-    font-family: 'Monaco', 'Roboto', monospace;
-    text-align: center;
-    border-radius: 25px !important;
-    background-color: var(--backgound-color);
-    color: var(--text-color-dark);
-}
-
-
-.pj-buttons {
-    justify-content: space-evenly;
-}
-
-
-.pj-buttons > li {
-    width: 50%;
-}
-
-
-.pj-button, .pj-input {
-    width: 80%;
     height: 80%;
-    min-height: 80%;
-    min-width: 80%;
-    border: none;
-}
-
-.text-input {
-    font-size: 1.5rem !important;
-    text-align: left;
-    padding-left: 2.5rem;
-    padding-top: 1.5rem;
-}
-
-.pj-button {
-    background-color: var(--text-color-light);
-    border-radius: 15px;
-    color: var(--backgound-color);
+    padding: 1rem;
     letter-spacing: 0.2rem;
-    font-weight: 800;
-    font-size: 1.8rem;
 }
 
-.pj-button:hover {
-    background-color: var(--text-color-dark);
-    color: white;
+.project-instructions{
+    height: 30%;
+    padding: 2rem;
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: var(--text-color-0);
 }
 
 
+/* ......   MARIO OUTPUT .........*/
 
-/* .......... CASH */
 
-.coins {
-    text-align: left !important;
+
+
+
+
+
+
+/* ------- p r o j e c t    i n p u t -----------------------*/
+.project-input {
+    height: 10%;
+    justify-content: end;
+    align-items: end;
+}
+
+.input-container {
+    width: 60%;
+    margin: 0 0 -2rem 0;
+}
+
+.input-right {
+    width: 80%;
+    justify-content: space-between;
+}
+
+.clear-button, .input-field, .submit-button {
+    height: 4rem;
+    border-radius: 25px;
+    font-family: monospace;
+}
+
+.clear-button, .submit-button {
+    width: 10rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.5rem;
+    
+}
+
+.clear-button {
+    transform: translatey(-5rem);
+    color: var(--text-color-2);
+    border: 1px solid rgba(45, 45, 45, 1);
+    background-color: rgba(85, 85, 85, 1);
+}
+
+.clear-button:hover {
+    border: 1px solid rgba(60, 60, 60, 1);
+    background-color: rgba(45, 45, 45, 1);
+    cursor: pointer;
+}
+
+
+.input-field {
+    width: 20rem;
+    text-align: center;
     font-size: 2rem;
+    
 }
 
-.total-coins {
-    text-align: left;
-    font-size: 3rem;
-    margin-top: 2rem;
-}
-
-.coins, .total-coins {
-    /*border: 1px solid red;*/
-    width: 100%;
-    padding-left: 2rem; 
+.input-field, .submit-button {
+    border: 2px solid rgba(100, 100, 100, 0.8);
+    color: rgba(80, 80, 80, 1);
+    background-color: rgba(150, 150, 150, 1);
 }
 
 
+.submit-button:hover {
+    color: var(--text-color-2);
+    background-color: rgba(120, 120, 120, 1);
+    cursor: pointer;
+}
 
 
 
 
 
+/*////////////////////////////////////////////////////////////////////////////////////////*/
+/********************************* M E D I A    Q U E R Y *********************************/
+
+@media (max-width: 1400px) {
+
+
+    /* ********** Project nav ************** */
+    #project-nav {
+        width: 100%;
+        margin-top: 9vh;
+        padding-top: 0;
+        height: auto;
+    }
+
+    .project-list {
+        flex-direction: row;
+        justify-content: center;
+        gap: 3rem;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .project-list > li {
+        display: flex;
+        flex-grow: 1;
+        height: auto;
+    }
+
+    .project-link {
+        padding-top: 0;
+        font-size: 2rem;
+     }
 
 
 
+    /* ************************ */
 
 
+    .project-frame {
+        width: 80%;
+        height: 70%;
+        margin: 16vh 0 0 0;   
+    }
 
+    .project-data {
+        width: 90%;
+    }
 
-
-
-
-
-
-
-
-
-/* ............................................................. */
-/* ..........MEDIA QUERY..................................... */
-
-
-@media (max-width: 1330px) {
-
-    .gradient {
+    .project-output {
+        height: 90%;
         flex-direction: column;
     }
 
-    #projects-list {
-        position: static;
+    .project-instructions, .output-frame {
         width: 100%;
     }
 
-    .pj-list {
-        flex-direction: row;
-        width: 100%;
+    .output-frame {
+        height: 70%;
     }
 
-    .li-link {
-        height: 4rem;
+    .output-field{
+        margin-top: -2.5rem;
+        width: 65%;
+        height: 100%;
+        font-size: 2.5rem;
+    }
+
+    .instructions-container {
+        width: 100%;
+        height: 30%;
+    }
+
+    .project-subtitle {
+        margin-top: -2rem;
+        font-size: 2.5rem;
+    }
+
+    .project-instructions{
         font-size: 1.5rem;
-        text-align: center;
-        padding: calc((6rem - 3rem) / 2);
-        list-style: none;
-        background-color: #22B989;
-        opacity: 45%;
     }
 
+    .project-input {
+        height: 10%;
+        justify-content: center;
+        align-items: end;
+    }
 
-
-    #projects-container {
-        position: unset;
+    .input-right {
         width: 100%;
+        justify-content: space-between;
     }
-   
-   section {
-    width: 90% !important;
-    height: 60vh !important;
-    margin-bottom: 15vh;
-   }
- /*
-   #projects-list {
-    width: 20%;
-   }
-    
-   #projects-container > h1 {
-    width: 90%;
-    text-align: left;
-    letter-spacing: 0.45rem;
-    font-size: 4rem;
-   }
 
-   .pj-list {
-    width: 90%;
-   }
-
-   .pj-link {
-    font-size: 1.8rem !important;
-    letter-spacing: 0.1rem;
-    font-weight: 600;
-    padding: 0.5rem;
-   }
-   */
+    .input-field {
+        width: 20rem;
+    }
 
 }

@@ -155,7 +155,7 @@ function mario(userInput, outputContainer) {
 
     // Error checking
     if (userInput <= 0 || userInput > 8) {
-        // alert('ERROR: Invalid input.');
+        alert('ERROR: Invalid input.');
         outputContainer.append(insertErrorMessage());
         return outputContainer;
     }

@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Portfolio</title>
+        <title>Rodrigo Laguna</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="" />
         <link rel="stylesheet" href="../styles/styles.css" />
         <link rel="stylesheet" href="../styles/gallery.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/dd94205240.js" crossorigin="anonymous"></script>
         <script src="../script/script.js"></script>
         <script src="../script/gallery.js"></script>
+
     </head>
 
     <!-- ********************************************************** -->
@@ -17,252 +19,215 @@
         <!-- ..........HEADER SECTION.............................. -->
         <!-- ...................................................... -->
         <header class="flex-container">
-            <div id="logo" class="flex-container flex-center">
-                <i class="fa-solid fa-code fa-4x header-logo"></i>
-            </div>
             <nav id="navbar">
-                    <ul id="nav-link-container" class="flex-container">
-                        <li class="section-link flex-container flex-center"><a class="link" href="../index.html">HOME</a></li>
-                        <li class="section-link flex-container flex-center"><a class="link" href="./about.html">ABOUT</a></li>
-                        <li class="section-link flex-container flex-center"><a class="link" href="./gallery.html">GALLERY</a></li>
-                        <li class="section-link flex-container flex-center"><a class="link" href="./galleryTest.html">CONTACT</a></li>
-                    </ul>
+                <ul id="nav-link-container" class="flex-container">
+                    <li class="section-link"><a class="link" href="../index.html">HOME</a></li>
+                    <li class="section-link"><a class="link" href="./about.html">ABOUT</a></li>
+                    <li class="section-link"><a class="link" href="./gallery.html">GALLERY</a></li>
+                    <li class="section-link"><a class="link" href="./contact.html">CONTACT</a></li>
+                </ul>
             </nav>
         </header>
 
         <!-- ..........MAIN SECTION................................ -->
         <!-- ...................................................... -->
-        <main class="flex-container">
-
+        <main>
             <div class="background-image">
-                <div class="gradient flex-container">
+                <div class="gradient flex-container flex-column">
 
-                    <div id="projects-list">
-                        <ul class="pj-list flex-container flex-column">
-                            <li class="li-link"><a class="pj-link" href="#mario">Mario</a></li>
-                            <li class="li-link"><a class="pj-link" href="#cash">Cash</a></li>
-                            <li class="li-link"><a class="pj-link" href="#credit">Credit</a></li>
-                            <li class="li-link"><a class="pj-link" href="#readability">Readability</a></li>
-                            <li class="li-link"><a class="pj-link" href="#">Caesar</a></li>
-                            <li class="li-link"><a class="pj-link" href="#">Substitution</a></li>
+
+
+                    <div id="project-nav">
+                        <ul class="project-list flex-container">
+                            <li><a class="project-link" id="mario" href="#mario-section">MARIO</a></li>
+                            <li><a class="project-link" id="mario" href="#cash-section">CASH</a></li>
+                            <li><a class="project-link" id="mario" href="#credit-section">CREDIT</a></li>
+                            <li><a class="project-link" id="mario" href="#caesar-section">CAESAR</a></li>
                         </ul>
                     </div>
-        
-        
-        
-                    <div id="projects-container" class="flex-container flex-column flex-center">
-        
-                        <!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
-                        <!-- __________ MARIO __________ -->
-        
-                        <section id="mario">
-                            <div class="pj-container">
-                                
-        
-                                <div class="pj-info flex-container">
-                                    <div class="title-container">
-                                        <h3 class="pj-title">
-                                            MARIO
-                                        </h3>
+
+                <!-- **********************************************--> 
+                <!-- *************** MARIO ************************--> 
+                    <section id="mario-section" class="project-section flex-container flex-center">
+                        <div class="project-frame flex-container">
+                            <div class="project-title flex-container">
+                                <h1 id="mario" class="title">MARIO</h1>
+                            </div>
+                        
+
+                            <div class="project-data">
+                            <!--____________OUTPUT_____________-->
+                                <div class="project-output  flex-container">
+                                    <div class="output-frame flex-container flex-center flex-column">
+                                        <div class="output-field" id="mario-output">
+                                            <!--Insert project output with JavaScript-->
+                                        </div>
+                                        <button class="clear-button" id="mario-clear">CLEAR</button>
                                     </div>
 
-                                    <div class="pj-frame">
-                                        <div class="upper-frame flex-container">
-                                            <div class="pj-details-container">
-                                                <h3>pyramid generator</h3>
-                                                <p class="pj-details">
-                                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                                    sed do eiusmod tempor incididunt ut labore et dolore magna 
-                                                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                                                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                                    <br><br> 
-                                                    Duis aute irure dolor in reprehenderit in voluptate velit 
-                                                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-                                                    occaecat cupidatat non proident, sunt in culpa qui officia 
-                                                    deserunt mollit anim id est laborum."
-                                                </p>
-                                            </div>
-                                            
-                                            <div class="output">
-                                                <div id="mario-output" class="output-field flex-container">
-                                                    <!-- Insert here the output of each project-->
-                                                </div>
-                                            </div> 
-                                        </div>
+                                    <div class="instructions-container flex-container flex-column">
+                                        <h3 class="project-subtitle">Pyramid generator</h3>
+                                        <p class="project-instructions">
+                                            This program recreates a pyramid using hases(#) for bricks.
+                                            Introduce a number between 1 and 8 for the pyramid's height
+                                            and click the <strong>RUN</strong> button to see your pyramid.
+                                        </p>
+                                    </div>
+                                </div>
 
-                                        <div class="user-input flex-container">
-                                            <div class="pj-input-container flex-container flex-center">
-                                                <input type="number" class="pj-input" id="mario-input" placeholder="Write here.." />
-                                            </div>
-                                            <ul class="pj-buttons flex-container">
-                                                <li class="flex-container flex-center"><button class="pj-clear pj-button" id="mario-clear">CLEAR</button></li>
-                                                <li class="flex-container flex-center"><button class="pj-submit pj-button" id="mario-submit">SUBMIT</button></li>
-                                            </ul>                        
+
+                            <!--____________INPUT_____________-->
+                                <div class="project-input flex-container">
+                                    <div class="input-container flex-container flex-center">
+                                        <div class="input-right flex-container">
+                                            <input type="text" value="" class="input-field" id="mario-input" placeholder="Write here..." />
+                                            <button class="submit-button" id="mario-submit">RUN</button>
                                         </div>
                                     </div>
-        
-                                
-                                
+                                </div>
                             </div>
-                        </section>
-        
-        
-        
-                        <!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
-                        <!-- __________ CASH __________ -->
-        
-                        <section id="cash">
-                            <div class="pj-container">
-                                <h3 class="pj-title">
-                                    CASH
-                                </h3>
-        
-                                <div class="pj-info flex-container">
-                                    <p class="pj-details">
-                                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                        sed do eiusmod tempor incididunt ut labore et dolore magna 
-                                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                                        ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                        <br><br> 
-                                        Duis aute irure dolor in reprehenderit in voluptate velit 
-                                        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-                                        occaecat cupidatat non proident, sunt in culpa qui officia 
-                                        deserunt mollit anim id est laborum."
+                        </div>
+                    </section>
+
+
+
+                <!-- **********************************************--> 
+                <!-- *************** CASH ************************--> 
+                <section id="cash-section" class="project-section flex-container flex-center">
+                    <div class="project-frame flex-container">
+                        <div class="project-title flex-container">
+                            <h1 id="cash" class="title">CASH</h1>
+                        </div>
+                    
+
+                        <div class="project-data">
+                        <!--____________OUTPUT_____________-->
+                            <div class="project-output  flex-container">
+                                <div class="output-frame flex-container flex-center flex-column">
+                                    <div class="output-field" id="cash-output">
+                                        <!--Insert project output with JavaScript-->
+
+                                    </div>
+                                    <button class="clear-button" id="cash-clear">CLEAR</button>
+                                </div>
+
+                                <div class="instructions-container flex-container flex-column">
+                                    <h3 class="project-subtitle">Coin counter</h3>
+                                    <p class="project-instructions">
+                                        This program prints the minimum coins needed to make the given
+                                        amount of change in cents.
+                                        Introduce a whole number greater than zero. Recall that 
+                                        the number cannot be a decimal, since we are counting cents.
                                     </p>
-                                    <div class="output">
-                                        <div id="cash-output" class="output-field flex-container flex-center">
-                                            <!-- Insert here the output of each project-->
-        
-        
-                                        </div>
-        
-                                    </div>
                                 </div>
-        
-                                <div class="user-input flex-container">
-                                    <div class="pj-input-container flex-container flex-center">
-                                        <input type="number" class="pj-input" id="cash-input" placeholder="Write here.." />
-                                    </div>
-                                    <ul class="pj-buttons flex-container">
-                                        <li class="flex-container flex-center"><button class="pj-clear pj-button" id="cash-clear">CLEAR</button></li>
-                                        <li class="flex-container flex-center"><button class="pj-submit pj-button" id="cash-submit">SUBMIT</button></li>
-                                    </ul>                        
-                                    
-                                </div>
-                                
                             </div>
-                        </section>
-        
-        
-        
-                        <!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
-                        <!-- __________ CREDIT __________ -->
-        
-                        <section id="credit">
-                            <div class="pj-container">
-                                <h3 class="pj-title">
-                                    CREDIT
-                                </h3>
-        
-                                <div class="pj-info flex-container">
-                                    <p class="pj-details">
-                                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                        sed do eiusmod tempor incididunt ut labore et dolore magna 
-                                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                                        ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                        <br><br> 
-                                        Duis aute irure dolor in reprehenderit in voluptate velit 
-                                        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-                                        occaecat cupidatat non proident, sunt in culpa qui officia 
-                                        deserunt mollit anim id est laborum."
-                                    </p>
-                                    <div class="output">
-                                        <div id="credit-output" class="output-field flex-container flex-center">
-                                            <!-- Insert here the output of each project-->
-        
-        
-                                        </div>
-        
+
+
+                        <!--____________INPUT_____________-->
+                            <div class="project-input flex-container">
+                                <div class="input-container flex-container flex-center">
+                                    <div class="input-right flex-container">
+                                        <input type="text" value="" class="input-field" id="cash-input" placeholder="Write here..." />
+                                        <button class="submit-button" id="cash-submit">RUN</button>
                                     </div>
                                 </div>
-        
-                                <div class="user-input flex-container">
-                                    <div class="pj-input-container flex-container flex-center">
-                                        <input type="number" class="pj-input" id="credit-input" placeholder="Write here.." />
-                                    </div>
-                                    <ul class="pj-buttons flex-container">
-                                        <li class="flex-container flex-center"><button class="pj-clear pj-button" id="credit-clear">CLEAR</button></li>
-                                        <li class="flex-container flex-center"><button class="pj-submit pj-button" id="credit-submit">SUBMIT</button></li>
-                                    </ul>                                                    
-                                </div>                        
                             </div>
-                        </section>
-        
-        
-        
-        
-                        <!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
-                        <!-- __________ READABILITY __________ -->
-        
-                        <section id="readability">
-                            <div class="pj-container">
-                                <h3 id="readability-title" class="pj-title">
-                                    READABILITY
-                                </h3>
-        
-                                <div class="pj-info flex-container">
-                                    <p class="pj-details">
-                                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                        sed do eiusmod tempor incididunt ut labore et dolore magna 
-                                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                                        ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                        <br><br> 
-                                        Duis aute irure dolor in reprehenderit in voluptate velit 
-                                        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-                                        occaecat cupidatat non proident, sunt in culpa qui officia 
-                                        deserunt mollit anim id est laborum."
-                                    </p>
-                                    <div class="output">
-                                        <div id="cash-output" class="output-field flex-container flex-center">
-                                            <!-- Insert here the output of each project-->
-        
-        
-                                        </div>
-        
-                                    </div>
-                                </div>
-        
-                                <div class="user-input flex-container">
-                                    <div class="pj-input-container flex-container flex-center">
-                                        <textarea type="number" class="pj-input text-input" id="readability-input" placeholder="Write here.."></textarea>
-                                    </div>
-                                    <ul class="pj-buttons flex-container">
-                                        <li class="flex-container flex-center"><button class="pj-clear pj-button" id="readability-clear">CLEAR</button></li>
-                                        <li class="flex-container flex-center"><button class="pj-submit pj-button" id="readability-submit">SUBMIT</button></li>
-                                    </ul>                        
-                                    
-                                </div>
-                                
+                        </div>
+                    </div>
+                </section>
+
+                <!-- **********************************************--> 
+                <!-- *************** CREDIT ************************--> 
+                    <section id="credit-section" class="project-section flex-container flex-center">
+                        <div class="project-frame flex-container">
+                            <div class="project-title flex-container">
+                                <h1 id="credit" class="title">CREDIT</h1>
                             </div>
-                        </section>
+                        
+    
+                            <div class="project-data">
+                            <!--____________OUTPUT_____________-->
+                                <div class="project-output  flex-container">
+                                    <div class="output-frame flex-container flex-center flex-column">
+                                        <div class="output-field" id="credit-output">
+                                            <!--Insert project output with JavaScript-->
+                                        </div>
+                                        <button class="clear-button" id="credit-clear">CLEAR</button>
+                                    </div>
+    
+                                    <div class="instructions-container flex-container flex-column">
+                                        <h3 class="project-subtitle">Card validator</h3>
+                                        <p class="project-instructions">
+                                            This program checks the validity of a given credit card number.
+                                            Introduce a credit card number and press the <strong>RUN</strong>
+                                            button to check whether if it is a valid American Express, 
+                                            MasterCard, or Visa card number.
+                                        </p>
+                                    </div>
+                                </div>
+    
+    
+                            <!--____________INPUT_____________-->
+                                <div class="project-input flex-container">
+                                    <div class="input-container flex-container flex-center">
+                                        <div class="input-right flex-container">
+                                            <input type="text" value="" class="input-field" id="credit-input" placeholder="Write here..." />
+                                            <button class="submit-button" id="credit-submit">RUN</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                <!-- **********************************************--> 
+                <!-- *************** CAESAR ************************--> 
+                    <section id="caesar-section" class="project-section flex-container flex-center">
+                        <div class="project-frame flex-container">
+                            <div class="project-title flex-container">
+                                <h1 id="caesar" class="title">CAESAR</h1>
+                            </div>
+                        
+    
+                            <div class="project-data">
+                            <!--____________OUTPUT_____________-->
+                                <div class="project-output  flex-container">
+                                    <div class="output-frame flex-container flex-center flex-column">
+                                        <div class="output-field" id="caesar-output">
+                                            <!--Insert project output with JavaScript-->
+                                        </div>
+                                        <button class="clear-button" id="caesar-clear">CLEAR</button>
+                                    </div>
+    
+                                    <div class="instructions-container flex-container flex-column">
+                                        <h3 class="project-subtitle">Text cipher</h3>
+                                        <p class="project-instructions">
+                                            This program encrypts messages using Caesar's cipher. 
+                                            Introduce a whole number followed by the text you want to cipher.
+                                            The number would be the key the program uses to cipher your text.
+                                            Separate the number and the text using a space: <strong>key text</strong>.
+
+                                        </p>
+                                    </div>
+                                </div>
+    
+    
+                            <!--____________INPUT_____________-->
+                                <div class="project-input flex-container">
+                                    <div class="input-container flex-container flex-center">
+                                        <div class="input-right flex-container">
+                                            <input type="text" value="" class="input-field" id="caesar-input" placeholder="Write here..." />
+                                            <button class="submit-button" id="caesar-submit">RUN</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
 
 
                 </div>
             </div>
-
-            
-
-
-            </div>
-
         </main>
-
-        <!-- ..........FOOTER SECTION.............................. -->
-        <!-- ...................................................... -->
-        <footer>
-
-        </footer>
-
     </body>
-
 </html>
